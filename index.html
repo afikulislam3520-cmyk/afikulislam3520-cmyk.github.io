@@ -125,6 +125,7 @@ section{max-width:1200px;padding:72px 24px}.section-head{margin-bottom:42px}.sec
 .feature .post-meta{color:#88899D;opacity:1;font-weight:650;letter-spacing:.02em}
 .post-actions{border-color:#EEEEF5}.post-actions span{color:#696B82;opacity:1}.post-actions span:hover{color:#5149D8;background:#F1F0FF}
 .contact-grid{gap:22px}.contact-card{padding:32px}.contact-card a{color:#5D55E8}
+.contact-detail{display:flex;align-items:center;gap:10px}.contact-detail-icon{width:19px;height:19px;flex:none;color:var(--site-primary);stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .socials a{background:#F0EFFF;color:#5149D8;border:1px solid #E4E2FF;transition:transform .2s}.socials a:hover{transform:translateY(-2px)}
 .cta{background:linear-gradient(120deg,#5149D8,#7770FF 70%,#938EFF);border-radius:24px;padding:54px;box-shadow:0 20px 45px rgba(82,74,214,.22)}
 .cta h2{color:#fff}.cta p{color:rgba(255,255,255,.84)}.cta .btn-secondary{background:#fff;color:#5149D8}
@@ -258,7 +259,7 @@ footer{max-width:1200px;color:#85869B;opacity:1;border-top:1px solid #E9E9F2}
 <section id="contact-details">
   <div class="section-head"><h2>Contact Information</h2><p>The information below can easily be replaced with your real contact details.</p></div>
   <div class="contact-grid">
-    <article class="contact-card"><h3>Direct Contact</h3><p>📱 Phone: <a id="phoneLink" href="tel:+8801000000000">+880 1000-000000</a></p><p>✉️ Email: <a id="emailLink" href="mailto:hello@example.com">hello@example.com</a></p><p>📍 Bangladesh</p><small>Update your phone and email from Personal Settings.</small></article>
+    <article class="contact-card"><h3>Direct Contact</h3><p class="contact-detail"><svg class="contact-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 5h4M10 18h4"/></svg><span>Phone: <a id="phoneLink" href="tel:+8801000000000">+880 1000-000000</a></span></p><p class="contact-detail"><svg class="contact-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email: <a id="emailLink" href="mailto:hello@example.com">hello@example.com</a></span></p><p class="contact-detail"><svg class="contact-detail-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Bangladesh</span></p><small>Update your phone and email from Personal Settings.</small></article>
     <article class="contact-card"><h3>Social Media</h3><p>Connect with me to see my work and updates.</p><div class="socials"><a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div><small>Sample links—replace them with your own profile URLs.</small></article>
   </div>
 </section>
