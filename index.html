@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Afikul Islam | Professional Portfolio</title>
+<style>
+:root{
+  --site-primary:#1877F2;
+  --site-secondary:#EAF3FF;
+  --site-background:#F0F2F5;
+  --site-on-primary:#FFFFFF;
+  --site-on-secondary:#302A5C;
+  --site-on-background:#18162B;
+  --site-font-body:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --site-font-heading:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --site-heading-scale:1;
+  --site-spacing-scale:1;
+  --site-radius-scale:1;
+  --site-decoration-opacity:1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--site-font-body);color:var(--site-on-background);background:var(--site-background)}
+#app{min-height:100vh;background:var(--site-background);border-radius:0}
+nav{display:flex;align-items:center;justify-content:space-between;max-width:1120px;margin:auto;padding:24px calc(24px * var(--site-spacing-scale));position:relative;z-index:5}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.5px}
+.logo span{color:var(--site-primary)}
+.navlinks{display:flex;gap:28px}
+.navlinks a{color:inherit;text-decoration:none;font-size:14px;font-weight:600;opacity:.75}
+.navlinks a:hover{opacity:1}
+.language-select{border:1px solid rgba(24,22,43,.12);background:#fff;color:inherit;border-radius:10px;padding:9px 11px;font-weight:700;cursor:pointer;min-width:105px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.color-select{border:1px solid rgba(24,22,43,.12);background:#fff;color:inherit;border-radius:10px;padding:9px 11px;font-weight:700;cursor:pointer;min-width:105px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.settings-btn{border:1px solid rgba(24,22,43,.12);background:#fff;color:inherit;border-radius:10px;padding:9px 11px;font-weight:800;cursor:pointer}
+.settings-panel{display:none;position:absolute;right:24px;top:78px;width:300px;background:#fff;border:1px solid rgba(24,22,43,.10);border-radius:16px;padding:20px;box-shadow:0 18px 45px rgba(0,0,0,.15);z-index:20}
+.settings-panel.open{display:block}.settings-panel h3{margin:0 0 16px;font-size:20px}.setting-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:12px 0}.setting-row label{font-weight:700;font-size:14px}.setting-row input{width:150px;padding:9px;border:1px solid #ddd;border-radius:9px}.settings-note{font-size:12px;opacity:.6;line-height:1.5;margin-top:14px}
+.btn{border:0;border-radius:calc(14px * var(--site-radius-scale));padding:13px 19px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-primary{background:var(--site-primary);color:var(--site-on-primary);box-shadow:0 8px 20px rgba(24,119,242,.22)}
+.btn-secondary{background:var(--site-secondary);color:var(--site-on-secondary)}
+.hero{max-width:1120px;margin:auto;padding:38px 24px 52px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+.eyebrow{display:inline-flex;background:var(--site-secondary);color:var(--site-primary);padding:8px 12px;border-radius:999px;font-size:13px;font-weight:800}
+h1,h2,h3{font-family:var(--site-font-heading);letter-spacing:-1.8px}
+h1{font-size:calc(clamp(46px,6vw,76px) * var(--site-heading-scale));line-height:1.02;margin:20px 0 22px;max-width:720px}
+.hero p{font-size:19px;line-height:1.7;max-width:620px;opacity:.7}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.visual{position:relative}
+.card{background:#fff;border:1px solid rgba(24,22,43,.08);border-radius:calc(20px * var(--site-radius-scale));padding:28px;box-shadow:0 18px 45px rgba(0,0,0,.10);position:relative;z-index:2}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--site-primary)}
+.chart{height:190px;display:flex;align-items:flex-end;gap:12px;padding:10px 4px}
+.bar{flex:1;background:var(--site-secondary);border-radius:10px 10px 3px 3px}
+.bar:nth-child(2){height:45%}.bar:nth-child(3){height:68%}.bar:nth-child(4){height:55%}.bar:nth-child(5){height:82%;background:var(--site-primary)}.bar:nth-child(6){height:73%}.bar:nth-child(7){height:92%}
+.metric{display:flex;justify-content:space-between;margin-top:22px;padding-top:18px;border-top:1px solid #eee}
+.metric strong{font-size:25px}
+.blob{position:absolute;width:220px;height:220px;border-radius:50%;background:#DDEBFF;right:-50px;top:-50px;opacity:var(--site-decoration-opacity)}
+section{max-width:1120px;margin:auto;padding:58px 24px}
+.section-head{text-align:center;max-width:700px;margin:0 auto 44px}
+h2{font-size:calc(42px * var(--site-heading-scale));margin:0 0 14px}
+.section-head p{opacity:.65;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{background:#fff;border:1px solid rgba(24,22,43,.07);padding:28px;border-radius:calc(16px * var(--site-radius-scale));box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.icon{width:46px;height:46px;border-radius:14px;background:var(--site-secondary);display:grid;place-items:center;color:var(--site-primary);font-weight:900;margin-bottom:22px}
+.feature h3{font-size:20px;letter-spacing:-.5px}
+.feature .post-meta{font-size:12px;opacity:.5;margin-bottom:10px}
+.post-actions{display:flex;gap:8px;margin-top:18px;border-top:1px solid #eee;padding-top:14px}
+.post-actions span{flex:1;text-align:center;padding:8px;border-radius:8px;font-size:13px;font-weight:700;opacity:.65;cursor:pointer}.post-actions span:hover{background:var(--site-secondary);opacity:1}
+.feature p{line-height:1.7;opacity:.65}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:#fff;border:1px solid rgba(24,22,43,.07);padding:28px;border-radius:calc(16px * var(--site-radius-scale));box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.contact-card a{color:var(--site-primary);font-weight:800;text-decoration:none}
+.contact-card small{display:block;margin-top:18px;opacity:.55;line-height:1.6}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.socials a{background:var(--site-secondary);padding:10px 14px;border-radius:12px;color:var(--site-primary);font-weight:800}
+.cta{background:var(--site-primary);color:#fff;border-radius:calc(18px * var(--site-radius-scale));padding:48px;display:flex;align-items:center;justify-content:space-between;gap:30px;box-shadow:0 10px 30px rgba(24,119,242,.18)}
+.cta h2{max-width:600px}
+.cta p{opacity:.82;line-height:1.7}
+footer{max-width:1120px;margin:auto;padding:28px 24px 44px;display:flex;justify-content:space-between;opacity:.55;font-size:13px}
+@media(max-width:800px){
+  .navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:48px;gap:42px}.grid,.contact-grid{grid-template-columns:1fr}.cta{padding:38px;display:block}.cta .btn{margin-top:18px}.language-select{min-width:88px}.settings-panel{right:12px;left:12px;width:auto}
+}
+@media(prefers-color-scheme:dark){
+  :root{--site-background:#18191A;--site-on-background:#E4E6EB;--site-secondary:#303031}
+  .card,.feature,.settings-panel{background:#191824;border-color:#302D3E}
+  .settings-btn,.color-select{background:#191824;border-color:#302D3E;color:#E4E6EB}
+  .metric{border-color:#302D3E}.blob{background:#27234A}
+}
+</style>
+</head>
+<body>
+<div id="app">
+<nav>
+  <div class="logo">Afikul<span> Islam</span></div>
+  <div class="navlinks">
+    <a href="#about">Home</a><a href="#profile-header">Profile</a><a href="#work">Posts</a><a href="#skills">Skills</a><a href="#contact-details">Contact</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px"><select class="color-select" id="colorSelect" aria-label="Theme"><option value="blue">Theme: Blue</option><option value="purple">Theme: Purple</option><option value="green">Theme: Green</option><option value="red">Theme: Red</option><option value="orange">Theme: Orange</option><option value="pink">Theme: Pink</option></select><button class="settings-btn" id="settingsBtn" type="button">⚙ Settings</button><a class="btn btn-primary" href="#contact-details">Message Me</a></div>
+</nav>
+<div class="settings-panel" id="settingsPanel">
+  <h3>Personal Settings</h3>
+  <div class="setting-row"><label for="headingSize">Heading Size</label><input id="headingSize" type="range" min="0.85" max="1.2" step="0.05" value="1"></div>
+  <div class="setting-row"><label for="spacingSize">Spacing</label><input id="spacingSize" type="range" min="0.8" max="1.2" step="0.05" value="1"></div>
+  <div class="setting-row"><label for="radiusSize">Corner Radius</label><input id="radiusSize" type="range" min="0.75" max="1.35" step="0.05" value="1"></div>
+  <div class="setting-row"><label for="themeMode">Display</label><select id="themeMode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+  <p class="settings-note">Customize the website appearance. Your settings are saved on this device.</p>
+</div>
+
+<main>
+<section class="hero" id="about">
+  <div>
+    <span class="eyebrow">👋 Welcome to my profile • Public</span>
+    <h1>I am Afikul Islam. <span style="color:var(--site-primary)">Turning ideas</span> into reality.</h1>
+    <p>I am a creative and goal-oriented person. Explore below to see my work, skills, projects, and contact information in one place. My goal is to keep learning, creating, and delivering value to people.</p>
+    <div class="actions">
+    <a class="btn btn-primary" href="#work">View My Posts</a>
+    <a class="btn btn-secondary" href="#contact-details">Connect</a>
+    </div>
+  </div>
+  <div class="visual">
+    <div class="blob"></div>
+    <div class="card">
+  <div class="card-top"><strong>Afikul Islam • Public</strong><span class="dot"></span></div>
+      <div class="chart"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i></div>
+    <div class="metric"><span>Focus on Work</span><strong>100%</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="profile-header">
+  <div class="card" style="padding:0;overflow:hidden;max-width:760px;margin:auto">
+    <div style="height:150px;background:linear-gradient(135deg,#1877F2,#6FA9FF,#DDEBFF)"></div>
+  <div style="display:flex;align-items:center;gap:24px;padding:0 28px 28px;margin-top:-46px;position:relative">
+    <div style="width:92px;height:92px;border-radius:50%;background:var(--site-primary);color:#fff;display:grid;place-items:center;font-size:38px;font-weight:900;flex:none;border:5px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.15)">A</div>
+    <div><h2 style="font-size:30px;margin:0 0 8px">Afikul Islam <span style="font-size:15px;color:var(--site-primary)">✓</span></h2><p style="margin:0;opacity:.65;line-height:1.6">Professional Portfolio • Creator • Digital Enthusiast</p><p style="margin:8px 0 0;font-size:14px;opacity:.55">📍 Bangladesh • 🌐 Online • ⭐ Working since 2026</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-head">
+    <h2>My Skills</h2>
+    <p>The skills I use to move new ideas, problems, and projects forward with care and creativity.</p>
+  </div>
+  <div class="grid">
+    <article class="feature"><div class="icon">01</div><h3>Creative Thinking</h3><p>I look for new ideas and try to approach everyday problems from fresh perspectives.</p></article>
+    <article class="feature"><div class="icon">02</div><h3>Digital Work</h3><p>I focus on making websites, content, and digital projects useful, engaging, and easy to use.</p></article>
+    <article class="feature"><div class="icon">03</div><h3>Responsibility</h3><p>I value time, communication, and quality while working to complete every project properly.</p></article>
+  </div>
+</section>
+
+<section id="profile-summary">
+  <div class="section-head"><h2>Profile</h2><p>A quick look at who I am, what I enjoy, and how I work.</p></div>
+  <div class="grid">
+    <article class="feature"><div class="icon">👤</div><h3>About Me</h3><p>I am Afikul Islam. I enjoy learning new things, working creatively, and collaborating with good people.</p><div class="post-actions"><span>👍 Like</span><span>💬 Talk</span></div></article>
+    <article class="feature"><div class="icon">💼</div><h3>Work & Interests</h3><p>I am interested in digital work, websites, content, and turning new ideas into reality.</p><div class="post-actions"><span>👍 Like</span><span>💬 Talk</span></div></article>
+    <article class="feature"><div class="icon">⭐</div><h3>My Values</h3><p>I value trust, time, a learning mindset, and high-quality work above all.</p><div class="post-actions"><span>👍 Like</span><span>💬 Talk</span></div></article>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="section-head"><h2>My Goal</h2><p>I focus on learning, creating, and becoming better every day.</p></div>
+  <div class="grid">
+    <article class="feature"><div class="icon">✓</div><h3>Learn</h3><p>Continuously improving myself by learning new skills and technologies.</p></article>
+    <article class="feature"><div class="icon">✓</div><h3>Create</h3><p>Applying what I learn to real work and meaningful projects.</p></article>
+    <article class="feature"><div class="icon">✓</div><h3>Create Value</h3><p>I prefer work that helps people and solves real-world problems.</p></article>
+  </div>
+</section>
+
+<section id="work">
+  <div class="section-head"><h2>My Posts & Work</h2><p>My work, thoughts, learning experiences, and important projects will be shared here.</p></div>
+  <div class="grid">
+    <article class="feature"><div class="icon">📝</div><div class="post-meta">Afikul Islam • Just now</div><h3>New Work</h3><p>Share photos and details of new projects, websites, or creative work here.</p><div class="post-actions"><span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span></div></article>
+    <article class="feature"><div class="icon">🚀</div><div class="post-meta">Afikul Islam • Today</div><h3>My Project</h3><p>Share the goals, progress, and results of important work with your audience.</p><div class="post-actions"><span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span></div></article>
+    <article class="feature"><div class="icon">💡</div><div class="post-meta">Afikul Islam • Yesterday</div><h3>My Thoughts</h3><p>Publish short posts or updates about learning, experiences, and new ideas.</p><div class="post-actions"><span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span></div></article>
+  </div>
+</section>
+
+<section id="contact-details">
+  <div class="section-head"><h2>Contact Information</h2><p>The information below can easily be replaced with your real contact details.</p></div>
+  <div class="contact-grid">
+    <article class="contact-card"><h3>Direct Contact</h3><p>📱 Phone: <a href="tel:+8801000000000">+880 1000-000000</a></p><p>✉️ Email: <a href="mailto:hello@example.com">hello@example.com</a></p><p>📍 Bangladesh</p><small>Sample information—replace it with your real phone, email, and address.</small></article>
+    <article class="contact-card"><h3>Social Media</h3><p>Connect with me to see my work and updates.</p><div class="socials"><a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div><small>Sample links—replace them with your own profile URLs.</small></article>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="cta">
+    <div><h2>Get in Touch</h2><p>For work, projects, collaboration, or friendship—feel free to send me a message.</p></div>
+    <a class="btn btn-secondary" href="mailto:hello@example.com?subject=Website%20Contact">Send Message</a>
+  </div>
+</section>
+</main>
+
+<footer><span>© 2026 Afikul Islam</span><span>Professional Portfolio • Public Profile • Bangladesh</span></footer>
+</div>
+<script>
+const colorThemes={blue:['#1877F2','#EAF3FF'],purple:['#7C3AED','#F1EAFE'],green:['#16A34A','#E9F8EE'],red:['#DC2626','#FDECEC'],orange:['#EA580C','#FFF0E6'],pink:['#DB2777','#FCEAF3']};
+function setColor(name){const t=colorThemes[name]||colorThemes.blue;document.documentElement.style.setProperty('--site-primary',t[0]);document.documentElement.style.setProperty('--site-secondary',t[1]);localStorage.setItem('portfolioColor',name)}
+document.getElementById('colorSelect').addEventListener('change',e=>setColor(e.target.value));
+const savedColor=localStorage.getItem('portfolioColor')||'blue';document.getElementById('colorSelect').value=savedColor;setColor(savedColor);
+const settingsPanel=document.getElementById('settingsPanel');document.getElementById('settingsBtn').addEventListener('click',()=>settingsPanel.classList.toggle('open'));
+function applySetting(key,value){document.documentElement.style.setProperty(key,value);localStorage.setItem('portfolio_'+key.replace('--site-',''),value)}
+const savedHeading=localStorage.getItem('portfolio_heading-scale')||'1';const savedSpacing=localStorage.getItem('portfolio_spacing-scale')||'1';const savedRadius=localStorage.getItem('portfolio_radius-scale')||'1';
+document.getElementById('headingSize').value=savedHeading;document.getElementById('spacingSize').value=savedSpacing;document.getElementById('radiusSize').value=savedRadius;applySetting('--site-heading-scale',savedHeading);applySetting('--site-spacing-scale',savedSpacing);applySetting('--site-radius-scale',savedRadius);
+document.getElementById('headingSize').addEventListener('input',e=>applySetting('--site-heading-scale',e.target.value));document.getElementById('spacingSize').addEventListener('input',e=>applySetting('--site-spacing-scale',e.target.value));document.getElementById('radiusSize').addEventListener('input',e=>applySetting('--site-radius-scale',e.target.value));
+</script>
+</body>
+</html>
