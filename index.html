@@ -93,6 +93,54 @@ footer{max-width:1120px;margin:auto;padding:28px 24px 44px;display:flex;justify-
 [data-display="dark"] .card-top strong,[data-display="dark"] .metric span,[data-display="dark"] .metric strong{color:#F3F4F6!important;opacity:1}
 [data-display="dark"] .settings-btn,[data-display="dark"] .color-select{background:#191824;border-color:#302D3E;color:#E4E6EB}
 [data-display="dark"] .metric{border-color:#302D3E}
+
+/* Premium visual refresh */
+:root{--site-primary:#635BFF;--site-secondary:#EEEDFF;--site-background:#F7F8FC;--site-on-background:#17182B}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;letter-spacing:-.01em;background:var(--site-background)}
+#app{background:radial-gradient(ellipse at 82% 5%,rgba(99,91,255,.10),transparent 30%),var(--site-background);color:var(--site-on-background)}
+nav{max-width:1200px;padding-top:26px;padding-bottom:26px}
+.logo{font-size:23px;letter-spacing:-1px}.logo span{color:var(--site-primary)}
+.navlinks{gap:30px}.navlinks a{font-size:13px;letter-spacing:.01em;transition:color .2s,opacity .2s}.navlinks a:hover{color:var(--site-primary)}
+.language-select,.color-select,.settings-btn{border:1px solid rgba(40,42,75,.12);background:rgba(255,255,255,.82);border-radius:12px;padding:11px 13px;box-shadow:0 5px 18px rgba(22,25,60,.05)}
+.btn{border-radius:12px;padding:14px 21px;transition:transform .2s,box-shadow .2s,background .2s}.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,#635BFF,#817BFF);box-shadow:0 10px 24px rgba(99,91,255,.25)}
+.btn-secondary{background:#EEEDFF;color:#403A9B}
+.hero{max-width:1200px;padding-top:76px;padding-bottom:86px;gap:54px}
+.eyebrow{background:#EEEDFF;color:#5149D8;padding:10px 15px;letter-spacing:.02em}
+h1{font-weight:850;letter-spacing:-3.4px;line-height:1.04}
+.hero p{font-size:18px;line-height:1.85;color:#62647B;opacity:1}
+.card{background:rgba(255,255,255,.9);border:1px solid rgba(92,88,150,.13);border-radius:26px;padding:30px;box-shadow:0 26px 70px rgba(34,36,83,.12);backdrop-filter:blur(12px)}
+.card-top{margin-bottom:28px}.card-top strong{font-size:14px;letter-spacing:.01em;color:#24243B}
+.chart{height:205px;gap:14px}.bar{background:linear-gradient(180deg,#DCD9FF,#BDB8FF);border-radius:9px 9px 4px 4px}.bar:nth-child(5){background:linear-gradient(180deg,#827AFF,#5E56E8)}
+.metric{border-color:#ECECF4}.metric span{color:#777990;font-size:14px;font-weight:650}.metric strong{color:#29294A;font-size:27px}
+.blob{background:linear-gradient(135deg,#C9C5FF,#ECEBFF);filter:blur(1px)}
+section{max-width:1200px;padding:72px 24px}.section-head{margin-bottom:42px}.section-head h2{font-weight:820;letter-spacing:-1.8px}.section-head p{font-size:16px;line-height:1.8;color:#777990;opacity:1}
+.grid{gap:22px}
+.feature,.contact-card{background:rgba(255,255,255,.92);border:1px solid #E9E9F2;border-radius:20px;padding:30px;box-shadow:0 8px 28px rgba(31,33,76,.045);transition:transform .22s,border-color .22s,box-shadow .22s}
+.feature:hover{transform:translateY(-5px);border-color:#D5D2FF;box-shadow:0 18px 42px rgba(48,45,110,.10)}
+.icon{width:50px;height:50px;border-radius:15px;background:linear-gradient(145deg,#F0EFFF,#E5E3FF);color:#5D55E8;margin-bottom:24px;display:grid;place-items:center;font-size:14px;letter-spacing:.02em}
+.icon svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.feature h3,.contact-card h3{font-size:20px;font-weight:780;letter-spacing:-.65px;color:#24243B}
+.feature p,.contact-card p{font-size:15px;line-height:1.8;color:#73758B;opacity:1}
+.feature .post-meta{color:#88899D;opacity:1;font-weight:650;letter-spacing:.02em}
+.post-actions{border-color:#EEEEF5}.post-actions span{color:#696B82;opacity:1}.post-actions span:hover{color:#5149D8;background:#F1F0FF}
+.contact-grid{gap:22px}.contact-card{padding:32px}.contact-card a{color:#5D55E8}
+.socials a{background:#F0EFFF;color:#5149D8;border:1px solid #E4E2FF;transition:transform .2s}.socials a:hover{transform:translateY(-2px)}
+.cta{background:linear-gradient(120deg,#5149D8,#7770FF 70%,#938EFF);border-radius:24px;padding:54px;box-shadow:0 20px 45px rgba(82,74,214,.22)}
+.cta h2{color:#fff}.cta p{color:rgba(255,255,255,.84)}.cta .btn-secondary{background:#fff;color:#5149D8}
+footer{max-width:1200px;color:#85869B;opacity:1;border-top:1px solid #E9E9F2}
+.settings-panel{border-radius:20px;box-shadow:0 24px 70px rgba(22,24,60,.18)}
+.editor-save{border-radius:12px;background:linear-gradient(135deg,#635BFF,#817BFF)}
+.uploaded-gallery img{border-radius:15px;box-shadow:0 8px 24px rgba(20,20,50,.10)}.photo-delete{border-radius:12px}
+@media(max-width:800px){.hero{padding-top:44px;padding-bottom:58px}.hero p{font-size:16px}section{padding:54px 20px}.feature,.contact-card{padding:24px}.cta{padding:32px;border-radius:20px}h1{letter-spacing:-2px}}
+@media(prefers-color-scheme:dark){:root{--site-background:#11121B;--site-on-background:#F2F2FA}#app{background:radial-gradient(ellipse at 82% 5%,rgba(112,104,255,.14),transparent 32%),#11121B}.feature,.contact-card,.card,.settings-panel{background:#1B1C2A;color:#F2F2FA;border-color:#303147;box-shadow:0 14px 40px rgba(0,0,0,.22)}.feature h3,.contact-card h3,.card-top strong,.metric strong{color:#F4F3FF!important}.feature p,.contact-card p,.metric span,.section-head p,.hero p{color:#B9BAD0!important}.navlinks a{color:#D8D8E8}.color-select,.settings-btn{background:#1B1C2A;color:#F2F2FA;border-color:#34354C}.icon{background:#2B2948;color:#B8B3FF}.post-actions{border-color:#34354C}.post-actions span{color:#C1C1D4}.metric{border-color:#34354C}footer{border-color:#303147;color:#A5A6BB}.blob{background:#302D61}}
+[data-display="dark"] #app{background:radial-gradient(ellipse at 82% 5%,rgba(112,104,255,.14),transparent 32%),#11121B}
+[data-display="dark"] .feature,[data-display="dark"] .contact-card,[data-display="dark"] .card,[data-display="dark"] .settings-panel{background:#1B1C2A;color:#F2F2FA;border-color:#303147}
+[data-display="dark"] .feature h3,[data-display="dark"] .contact-card h3,[data-display="dark"] .card-top strong,[data-display="dark"] .metric strong{color:#F4F3FF!important}
+[data-display="dark"] .feature p,[data-display="dark"] .contact-card p,[data-display="dark"] .metric span,[data-display="dark"] .section-head p,[data-display="dark"] .hero p{color:#B9BAD0!important}
+[data-display="dark"] .navlinks a{color:#D8D8E8}[data-display="dark"] .color-select,[data-display="dark"] .settings-btn{background:#1B1C2A;color:#F2F2FA;border-color:#34354C}
+[data-display="dark"] .icon{background:#2B2948;color:#B8B3FF}[data-display="dark"] .post-actions{border-color:#34354C}[data-display="dark"] .post-actions span{color:#C1C1D4}[data-display="dark"] .metric{border-color:#34354C}
+
 </style>
 </head>
 <body>
@@ -140,7 +188,7 @@ footer{max-width:1120px;margin:auto;padding:28px 24px 44px;display:flex;justify-
 <main>
 <section class="hero" id="about">
   <div>
-    <span class="eyebrow">👋 Welcome to my profile • Public</span>
+    <span class="eyebrow">WELCOME TO MY PROFILE · PUBLIC</span>
     <h1 id="heroHeading">I am <span id="heroName">Afikul Islam</span>. <span id="heroTagline" style="color:var(--site-primary)">Turning ideas into reality.</span></h1>
     <p id="heroBio">I am a creative and goal-oriented person. Explore below to see my work, skills, projects, and contact information in one place. My goal is to keep learning, creating, and delivering value to people.</p>
     <div class="actions">
@@ -183,9 +231,9 @@ footer{max-width:1120px;margin:auto;padding:28px 24px 44px;display:flex;justify-
 <section id="profile-summary">
   <div class="section-head"><h2>Profile</h2><p>A quick look at who I am, what I enjoy, and how I work.</p></div>
   <div class="grid">
-    <article class="feature"><div class="icon">👤</div><h3>About Me</h3><p>I am Afikul Islam. I enjoy learning new things, working creatively, and collaborating with good people.</p><div class="post-actions"><span>👍 Like</span><span>💬 Talk</span></div></article>
-    <article class="feature"><div class="icon">💼</div><h3>Work & Interests</h3><p>I am interested in digital work, websites, content, and turning new ideas into reality.</p><div class="post-actions"><span>👍 Like</span><span>💬 Talk</span></div></article>
-    <article class="feature"><div class="icon">⭐</div><h3>My Values</h3><p>I value trust, time, a learning mindset, and high-quality work above all.</p><div class="post-actions"><span>👍 Like</span><span>💬 Talk</span></div></article>
+    <article class="feature"><div class="icon">👤</div><h3>About Me</h3><p>I am Afikul Islam. I enjoy learning new things, working creatively, and collaborating with good people.</p><div class="post-actions"><span>Like</span><span>Talk</span></div></article>
+    <article class="feature"><div class="icon">💼</div><h3>Work & Interests</h3><p>I am interested in digital work, websites, content, and turning new ideas into reality.</p><div class="post-actions"><span>Like</span><span>Talk</span></div></article>
+    <article class="feature"><div class="icon">⭐</div><h3>My Values</h3><p>I value trust, time, a learning mindset, and high-quality work above all.</p><div class="post-actions"><span>Like</span><span>Talk</span></div></article>
   </div>
 </section>
 
@@ -201,9 +249,9 @@ footer{max-width:1120px;margin:auto;padding:28px 24px 44px;display:flex;justify-
 <section id="work">
   <div class="section-head"><h2>My Posts & Work</h2><p>My work, thoughts, learning experiences, and important projects will be shared here.</p></div>
   <div class="grid">
-    <article class="feature"><div class="icon">📝</div><div class="post-meta">Afikul Islam • Just now</div><h3>New Work</h3><p>Share photos and details of new projects, websites, or creative work here.</p><div class="post-actions"><span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span></div></article>
-    <article class="feature"><div class="icon">🚀</div><div class="post-meta">Afikul Islam • Today</div><h3>My Project</h3><p>Share the goals, progress, and results of important work with your audience.</p><div class="post-actions"><span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span></div></article>
-    <article class="feature"><div class="icon">💡</div><div class="post-meta">Afikul Islam • Yesterday</div><h3>My Thoughts</h3><p>Publish short posts or updates about learning, experiences, and new ideas.</p><div class="post-actions"><span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span></div></article>
+    <article class="feature"><div class="icon">📝</div><div class="post-meta">Afikul Islam • Just now</div><h3>New Work</h3><p>Share photos and details of new projects, websites, or creative work here.</p><div class="post-actions"><span>Like</span><span>Comment</span><span>Share</span></div></article>
+    <article class="feature"><div class="icon">🚀</div><div class="post-meta">Afikul Islam • Today</div><h3>My Project</h3><p>Share the goals, progress, and results of important work with your audience.</p><div class="post-actions"><span>Like</span><span>Comment</span><span>Share</span></div></article>
+    <article class="feature"><div class="icon">💡</div><div class="post-meta">Afikul Islam • Yesterday</div><h3>My Thoughts</h3><p>Publish short posts or updates about learning, experiences, and new ideas.</p><div class="post-actions"><span>Like</span><span>Comment</span><span>Share</span></div></article>
   </div>
 </section>
 
