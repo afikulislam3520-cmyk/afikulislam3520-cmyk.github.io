@@ -32,13 +32,13 @@ nav{display:flex;align-items:center;justify-content:space-between;max-width:1120
 .language-select{border:1px solid rgba(24,22,43,.12);background:#fff;color:inherit;border-radius:10px;padding:9px 11px;font-weight:700;cursor:pointer;min-width:105px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .color-select{border:1px solid rgba(24,22,43,.12);background:#fff;color:inherit;border-radius:10px;padding:9px 11px;font-weight:700;cursor:pointer;min-width:105px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .settings-btn{border:1px solid rgba(24,22,43,.12);background:#fff;color:inherit;border-radius:10px;padding:9px 11px;font-weight:800;cursor:pointer}
-.settings-panel{display:none;position:absolute;right:24px;top:78px;width:340px;max-height:calc(100vh - 100px);overflow:auto;background:#fff;border:1px solid rgba(24,22,43,.10);border-radius:16px;padding:20px;box-shadow:0 18px 45px rgba(0,0,0,.15);z-index:20}
+.settings-panel{display:none;position:absolute;right:24px;top:78px;width:340px;max-height:80vh;overflow:auto;background:#fff;border:1px solid rgba(24,22,43,.10);border-radius:16px;padding:20px;box-shadow:0 18px 45px rgba(0,0,0,.15);z-index:20}
 .settings-panel.open{display:block}.settings-panel h3{margin:0 0 16px;font-size:20px}.setting-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:12px 0}.setting-row label{font-weight:700;font-size:14px}.setting-row input{width:150px;padding:9px;border:1px solid #ddd;border-radius:9px}.settings-note{font-size:12px;opacity:.6;line-height:1.5;margin-top:14px}
-.settings-panel input[type="text"],.settings-panel input[type="email"],.settings-panel input[type="tel"]{width:100%;padding:9px;border:1px solid #ddd;border-radius:9px;background:transparent;color:inherit}.settings-panel input[type="file"]{width:100%;font-size:12px}.settings-panel .setting-field{margin:12px 0}.settings-panel .setting-field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}.settings-panel .settings-divider{border:0;border-top:1px solid rgba(128,128,128,.25);margin:16px 0}
+.editor-divider{height:1px;background:#eee;margin:18px 0}.editor-title{font-size:15px;font-weight:800;margin:0 0 10px}.editor-input{width:100%;padding:10px 11px;border:1px solid #ddd;border-radius:9px;font:inherit;margin:5px 0 9px}.editor-input[type=file]{padding:8px}.editor-save{width:100%;margin-top:6px;background:var(--site-primary);color:#fff;border:0;border-radius:10px;padding:11px;font-weight:800;cursor:pointer}.editor-status{font-size:12px;opacity:.65;margin:8px 0 0;line-height:1.4}
 .btn{border:0;border-radius:calc(14px * var(--site-radius-scale));padding:13px 19px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block}
 .btn-primary{background:var(--site-primary);color:var(--site-on-primary);box-shadow:0 8px 20px rgba(24,119,242,.22)}
 .btn-secondary{background:var(--site-secondary);color:var(--site-on-secondary)}
-.hero{max-width:1120px;margin:auto;padding:calc(38px * var(--site-spacing-scale)) calc(24px * var(--site-spacing-scale)) calc(52px * var(--site-spacing-scale));display:grid;grid-template-columns:1.15fr .85fr;gap:calc(34px * var(--site-spacing-scale));align-items:center}
+.hero{max-width:1120px;margin:auto;padding:38px 24px 52px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
 .eyebrow{display:inline-flex;background:var(--site-secondary);color:var(--site-primary);padding:8px 12px;border-radius:999px;font-size:13px;font-weight:800}
 h1,h2,h3{font-family:var(--site-font-heading);letter-spacing:-1.8px}
 h1{font-size:calc(clamp(46px,6vw,76px) * var(--site-heading-scale));line-height:1.02;margin:20px 0 22px;max-width:720px}
@@ -54,11 +54,11 @@ h1{font-size:calc(clamp(46px,6vw,76px) * var(--site-heading-scale));line-height:
 .metric{display:flex;justify-content:space-between;margin-top:22px;padding-top:18px;border-top:1px solid #eee}
 .metric strong{font-size:25px}
 .blob{position:absolute;width:220px;height:220px;border-radius:50%;background:#DDEBFF;right:-50px;top:-50px;opacity:var(--site-decoration-opacity)}
-section{max-width:1120px;margin:auto;padding:calc(58px * var(--site-spacing-scale)) calc(24px * var(--site-spacing-scale))}
+section{max-width:1120px;margin:auto;padding:58px 24px}
 .section-head{text-align:center;max-width:700px;margin:0 auto 44px}
 h2{font-size:calc(42px * var(--site-heading-scale));margin:0 0 14px}
 .section-head p{opacity:.65;line-height:1.7}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(18px * var(--site-spacing-scale))}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .feature{background:#fff;border:1px solid rgba(24,22,43,.07);padding:28px;border-radius:calc(16px * var(--site-radius-scale));box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .icon{width:46px;height:46px;border-radius:14px;background:var(--site-secondary);display:grid;place-items:center;color:var(--site-primary);font-weight:900;margin-bottom:22px}
 .feature h3{font-size:20px;letter-spacing:-.5px}
@@ -85,8 +85,11 @@ footer{max-width:1120px;margin:auto;padding:28px 24px 44px;display:flex;justify-
   .settings-btn,.color-select{background:#191824;border-color:#302D3E;color:#E4E6EB}
   .metric{border-color:#302D3E}.blob{background:#27234A}
 }
-body.theme-light{--site-background:#F0F2F5;--site-on-background:#18162B}.theme-light .card,.theme-light .feature,.theme-light .contact-card,.theme-light .settings-panel{background:#fff;border-color:rgba(24,22,43,.08)}
-body.theme-dark{--site-background:#18191A;--site-on-background:#E4E6EB;--site-secondary:#303031}.theme-dark .card,.theme-dark .feature,.theme-dark .contact-card,.theme-dark .settings-panel{background:#191824;border-color:#302D3E}.theme-dark .settings-btn,.theme-dark .color-select{background:#191824;border-color:#302D3E;color:#E4E6EB}.theme-dark .metric{border-color:#302D3E}
+[data-display="light"]{--site-background:#F0F2F5;--site-on-background:#18162B;--site-secondary:#EAF3FF}
+[data-display="dark"]{--site-background:#18191A;--site-on-background:#E4E6EB;--site-secondary:#303031}
+[data-display="dark"] .card,[data-display="dark"] .feature,[data-display="dark"] .settings-panel,[data-display="dark"] .contact-card{background:#191824;border-color:#302D3E}
+[data-display="dark"] .settings-btn,[data-display="dark"] .color-select{background:#191824;border-color:#302D3E;color:#E4E6EB}
+[data-display="dark"] .metric{border-color:#302D3E}
 </style>
 </head>
 <body>
@@ -100,17 +103,20 @@ body.theme-dark{--site-background:#18191A;--site-on-background:#E4E6EB;--site-se
 </nav>
 <div class="settings-panel" id="settingsPanel">
   <h3>Personal Settings</h3>
-  <div class="setting-field"><label for="profilePhoto">Profile Photo</label><input id="profilePhoto" type="file" accept="image/*"></div>
-  <div class="setting-field"><label for="profileNameInput">Name</label><input id="profileNameInput" type="text" value="Afikul Islam"></div>
-  <div class="setting-field"><label for="heroHeadingInput">Hero Heading</label><input id="heroHeadingInput" type="text" value="I am Afikul Islam. Turning ideas into reality."></div>
-  <div class="setting-field"><label for="bioInput">Bio</label><input id="bioInput" type="text" value="I am a creative and goal-oriented person. Explore below to see my work, skills, projects, and contact information in one place. My goal is to keep learning, creating, and delivering value to people."></div>
-  <div class="setting-field"><label for="phoneInput">Phone</label><input id="phoneInput" type="tel" value="+880 1000-000000"></div>
-  <div class="setting-field"><label for="emailInput">Email</label><input id="emailInput" type="email" value="hello@example.com"></div>
-  <hr class="settings-divider">
   <div class="setting-row"><label for="headingSize">Heading Size</label><input id="headingSize" type="range" min="0.85" max="1.2" step="0.05" value="1"></div>
   <div class="setting-row"><label for="spacingSize">Spacing</label><input id="spacingSize" type="range" min="0.8" max="1.2" step="0.05" value="1"></div>
   <div class="setting-row"><label for="radiusSize">Corner Radius</label><input id="radiusSize" type="range" min="0.75" max="1.35" step="0.05" value="1"></div>
   <div class="setting-row"><label for="themeMode">Display</label><select id="themeMode"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+  <div class="editor-divider"></div>
+  <p class="editor-title">Edit Website</p>
+  <label for="profileImage">Profile Photo</label><input class="editor-input" id="profileImage" type="file" accept="image/*">
+  <label for="editName">Name</label><input class="editor-input" id="editName" type="text" placeholder="Afikul Islam">
+  <label for="editHero">Hero Heading</label><input class="editor-input" id="editHero" type="text" placeholder="Turning ideas into reality.">
+  <label for="editBio">Bio</label><textarea class="editor-input" id="editBio" rows="3" placeholder="Write your introduction..."></textarea>
+  <label for="editPhone">Phone</label><input class="editor-input" id="editPhone" type="text" placeholder="+880 1000-000000">
+  <label for="editEmail">Email</label><input class="editor-input" id="editEmail" type="email" placeholder="hello@example.com">
+  <button class="editor-save" id="saveWebsite" type="button">Save Website Changes</button>
+  <p class="editor-status" id="editorStatus">Changes are saved on this device. Public changes still need to be published to GitHub.</p>
   <p class="settings-note">Customize the website appearance. Your settings are saved on this device.</p>
 </div>
 
@@ -118,7 +124,7 @@ body.theme-dark{--site-background:#18191A;--site-on-background:#E4E6EB;--site-se
 <section class="hero" id="about">
   <div>
     <span class="eyebrow">👋 Welcome to my profile • Public</span>
-    <h1 id="heroHeading">I am Afikul Islam. <span style="color:var(--site-primary)">Turning ideas</span> into reality.</h1>
+    <h1 id="heroHeading">I am <span id="heroName">Afikul Islam</span>. <span id="heroTagline" style="color:var(--site-primary)">Turning ideas into reality.</span></h1>
     <p id="heroBio">I am a creative and goal-oriented person. Explore below to see my work, skills, projects, and contact information in one place. My goal is to keep learning, creating, and delivering value to people.</p>
     <div class="actions">
     <a class="btn btn-primary" href="#work">View My Posts</a>
@@ -138,9 +144,9 @@ body.theme-dark{--site-background:#18191A;--site-on-background:#E4E6EB;--site-se
 <section id="profile-header">
   <div class="card" style="padding:0;overflow:hidden;max-width:760px;margin:auto">
     <div style="height:150px;background:linear-gradient(135deg,#1877F2,#6FA9FF,#DDEBFF)"></div>
-  <div style="display:flex;align-items:center;gap:24px;padding:0 28px 28px;margin-top:-46px;position:relative">
+    <div style="display:flex;align-items:center;gap:24px;padding:0 28px 28px;margin-top:-46px;position:relative">
     <div id="profileAvatar" style="width:92px;height:92px;border-radius:50%;background:var(--site-primary);color:#fff;display:grid;place-items:center;font-size:38px;font-weight:900;flex:none;border:5px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.15)">A</div>
-    <div><h2 style="font-size:30px;margin:0 0 8px"><span class="profile-name">Afikul Islam</span> <span style="font-size:15px;color:var(--site-primary)">✓</span></h2><p style="margin:0;opacity:.65;line-height:1.6">Professional Portfolio • Creator • Digital Enthusiast</p><p style="margin:8px 0 0;font-size:14px;opacity:.55">📍 Bangladesh • 🌐 Online • ⭐ Working since 2026</p></div>
+    <div><h2 style="font-size:30px;margin:0 0 8px"><span id="profileName">Afikul Islam</span> <span style="font-size:15px;color:var(--site-primary)">✓</span></h2><p style="margin:0;opacity:.65;line-height:1.6">Professional Portfolio • Creator • Digital Enthusiast</p><p style="margin:8px 0 0;font-size:14px;opacity:.55">📍 Bangladesh • 🌐 Online • ⭐ Working since 2026</p></div>
     </div>
   </div>
 </section>
@@ -187,7 +193,7 @@ body.theme-dark{--site-background:#18191A;--site-on-background:#E4E6EB;--site-se
 <section id="contact-details">
   <div class="section-head"><h2>Contact Information</h2><p>The information below can easily be replaced with your real contact details.</p></div>
   <div class="contact-grid">
-    <article class="contact-card"><h3>Direct Contact</h3><p>📱 Phone: <a id="phoneLink" href="tel:+8801000000000">+880 1000-000000</a></p><p>✉️ Email: <a id="emailLink" href="mailto:hello@example.com">hello@example.com</a></p><p>📍 Bangladesh</p><small>Sample information—replace it with your real phone, email, and address.</small></article>
+    <article class="contact-card"><h3>Direct Contact</h3><p>📱 Phone: <a id="phoneLink" href="tel:+8801000000000">+880 1000-000000</a></p><p>✉️ Email: <a id="emailLink" href="mailto:hello@example.com">hello@example.com</a></p><p>📍 Bangladesh</p><small>Update your phone and email from Personal Settings.</small></article>
     <article class="contact-card"><h3>Social Media</h3><p>Connect with me to see my work and updates.</p><div class="socials"><a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div><small>Sample links—replace them with your own profile URLs.</small></article>
   </div>
 </section>
@@ -208,17 +214,15 @@ function setColor(name){const t=colorThemes[name]||colorThemes.blue;document.doc
 document.getElementById('colorSelect').addEventListener('change',e=>setColor(e.target.value));
 const savedColor=localStorage.getItem('portfolioColor')||'blue';document.getElementById('colorSelect').value=savedColor;setColor(savedColor);
 const settingsPanel=document.getElementById('settingsPanel');document.getElementById('settingsBtn').addEventListener('click',()=>settingsPanel.classList.toggle('open'));
-const profileNameInput=document.getElementById('profileNameInput'),heroHeadingInput=document.getElementById('heroHeadingInput'),bioInput=document.getElementById('bioInput'),phoneInput=document.getElementById('phoneInput'),emailInput=document.getElementById('emailInput');
-function saveTextSetting(key,value){localStorage.setItem('portfolio_'+key,value)}
-function applyTextSettings(){const name=localStorage.getItem('portfolio_name')||'Afikul Islam';const heading=localStorage.getItem('portfolio_heroHeading')||'I am Afikul Islam. Turning ideas into reality.';const bio=localStorage.getItem('portfolio_bio')||document.getElementById('heroBio').textContent;const phone=localStorage.getItem('portfolio_phone')||'+880 1000-000000';const email=localStorage.getItem('portfolio_email')||'hello@example.com';document.querySelectorAll('.profile-name').forEach(el=>el.textContent=name);document.querySelector('.logo').innerHTML=name.split(' ').map((part,i)=>i===0?part:'<span>'+part+'</span>').join(' ');document.querySelectorAll('.card-top strong').forEach(el=>el.textContent=name+' • Public');document.getElementById('heroHeading').textContent=heading;document.getElementById('heroBio').textContent=bio;document.getElementById('phoneLink').textContent=phone;document.getElementById('phoneLink').href='tel:'+phone.replace(/[^+\d]/g,'');document.getElementById('emailLink').textContent=email;document.getElementById('emailLink').href='mailto:'+email;document.querySelectorAll('.post-meta').forEach(el=>el.textContent=el.textContent.replace('Afikul Islam',name));profileNameInput.value=name;heroHeadingInput.value=heading;bioInput.value=bio;phoneInput.value=phone;emailInput.value=email;}
-[profileNameInput,heroHeadingInput,bioInput,phoneInput,emailInput].forEach((input,index)=>input.addEventListener('change',()=>{const keys=['name','heroHeading','bio','phone','email'];saveTextSetting(keys[index],input.value.trim());applyTextSettings()}));
-applyTextSettings();
-const themeMode=document.getElementById('themeMode');function applyDisplayMode(mode){document.body.classList.remove('theme-light','theme-dark');if(mode==='light')document.body.classList.add('theme-light');if(mode==='dark')document.body.classList.add('theme-dark');themeMode.value=mode}const savedDisplay=localStorage.getItem('portfolio_display-mode')||'system';applyDisplayMode(savedDisplay);themeMode.addEventListener('change',()=>{localStorage.setItem('portfolio_display-mode',themeMode.value);applyDisplayMode(themeMode.value)});
-const profilePhotoInput=document.getElementById('profilePhoto');const savedPhoto=localStorage.getItem('portfolio_profilePhoto');if(savedPhoto){document.getElementById('profileAvatar').innerHTML='<img alt="Profile photo" src="'+savedPhoto+'" style="width:100%;height:100%;object-fit:cover;border-radius:50%">'}profilePhotoInput.addEventListener('change',()=>{const file=profilePhotoInput.files&&profilePhotoInput.files[0];if(!file)return;if(!file.type.startsWith('image/')){alert('Please choose an image file.');return}if(file.size>1500000){alert('Please choose an image smaller than 1.5 MB.');return}const reader=new FileReader();reader.onload=()=>{try{localStorage.setItem('portfolio_profilePhoto',reader.result);document.getElementById('profileAvatar').innerHTML='<img alt="Profile photo" src="'+reader.result+'" style="width:100%;height:100%;object-fit:cover;border-radius:50%">'}catch(error){alert('The image could not be saved. Try a smaller image.')}};reader.readAsDataURL(file)});
 function applySetting(key,value){document.documentElement.style.setProperty(key,value);localStorage.setItem('portfolio_'+key.replace('--site-',''),value)}
 const savedHeading=localStorage.getItem('portfolio_heading-scale')||'1';const savedSpacing=localStorage.getItem('portfolio_spacing-scale')||'1';const savedRadius=localStorage.getItem('portfolio_radius-scale')||'1';
 document.getElementById('headingSize').value=savedHeading;document.getElementById('spacingSize').value=savedSpacing;document.getElementById('radiusSize').value=savedRadius;applySetting('--site-heading-scale',savedHeading);applySetting('--site-spacing-scale',savedSpacing);applySetting('--site-radius-scale',savedRadius);
 document.getElementById('headingSize').addEventListener('input',e=>applySetting('--site-heading-scale',e.target.value));document.getElementById('spacingSize').addEventListener('input',e=>applySetting('--site-spacing-scale',e.target.value));document.getElementById('radiusSize').addEventListener('input',e=>applySetting('--site-radius-scale',e.target.value));
+const themeMode=document.getElementById('themeMode');const savedMode=localStorage.getItem('portfolio_display-mode')||'system';themeMode.value=savedMode;function applyDisplayMode(mode){document.documentElement.dataset.display=mode;localStorage.setItem('portfolio_display-mode',mode)}applyDisplayMode(savedMode);themeMode.addEventListener('change',e=>applyDisplayMode(e.target.value));
+const editName=document.getElementById('editName'),editHero=document.getElementById('editHero'),editBio=document.getElementById('editBio'),editPhone=document.getElementById('editPhone'),editEmail=document.getElementById('editEmail'),profileImage=document.getElementById('profileImage'),editorStatus=document.getElementById('editorStatus');
+function loadWebsiteEdits(){const name=localStorage.getItem('portfolio_name')||'Afikul Islam';const hero=localStorage.getItem('portfolio_hero')||'Turning ideas into reality.';const bio=localStorage.getItem('portfolio_bio')||'I am a creative and goal-oriented person. Explore below to see my work, skills, projects, and contact information in one place. My goal is to keep learning, creating, and delivering value to people.';const phone=localStorage.getItem('portfolio_phone')||'+880 1000-000000';const email=localStorage.getItem('portfolio_email')||'hello@example.com';editName.value=name;editHero.value=hero;editBio.value=bio;editPhone.value=phone;editEmail.value=email;document.getElementById('heroName').textContent=name;document.getElementById('profileName').textContent=name;document.getElementById('heroTagline').textContent=hero;document.getElementById('heroBio').textContent=bio;document.getElementById('phoneLink').textContent=phone;document.getElementById('phoneLink').href='tel:'+phone.replace(/[^+\d]/g,'');document.getElementById('emailLink').textContent=email;document.getElementById('emailLink').href='mailto:'+email;const photo=localStorage.getItem('portfolio_profile-image');if(photo){document.getElementById('profileAvatar').style.backgroundImage='url('+photo+')';document.getElementById('profileAvatar').style.backgroundSize='cover';document.getElementById('profileAvatar').style.backgroundPosition='center';document.getElementById('profileAvatar').textContent=''}}
+loadWebsiteEdits();
+document.getElementById('saveWebsite').addEventListener('click',()=>{localStorage.setItem('portfolio_name',editName.value.trim()||'Afikul Islam');localStorage.setItem('portfolio_hero',editHero.value.trim()||'Turning ideas into reality.');localStorage.setItem('portfolio_bio',editBio.value.trim()||'I am a creative and goal-oriented person.');localStorage.setItem('portfolio_phone',editPhone.value.trim()||'+880 1000-000000');localStorage.setItem('portfolio_email',editEmail.value.trim()||'hello@example.com');const file=profileImage.files[0];if(file){const reader=new FileReader();reader.onload=()=>{localStorage.setItem('portfolio_profile-image',reader.result);loadWebsiteEdits();editorStatus.textContent='Saved on this device. Public publishing still requires updating GitHub.'};reader.readAsDataURL(file)}else{loadWebsiteEdits();editorStatus.textContent='Saved on this device. Public publishing still requires updating GitHub.'}});
 </script>
 </body>
 </html>
